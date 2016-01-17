@@ -37,6 +37,7 @@ onload = function update() {
 
     // time update
     currentTime = s ? MAX : audio.currentTime;
+
     while (time < currentTime) {
         while (time < timeNextFrame) {
             if (s) {
@@ -94,6 +95,7 @@ onload = function update() {
         audio.play();
         time = 0;
     } else {
+
         //render visual
         H = canvas.height = 512;
         W = canvas.width = 0 | H * innerWidth / innerHeight;
@@ -118,6 +120,7 @@ onload = function update() {
                 c.moveTo(p.x, p.y);
                 c.lineTo(p.x - e * p.dx, p.y - e * p.dy);
             }
+            
             c.stroke();
         });
     }
